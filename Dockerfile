@@ -14,3 +14,10 @@ RUN wget -nv https://download-cf.jetbrains.com/idea/${INTELLIJ_IDE_TAR} && \
     rm ${INTELLIJ_IDE_TAR} && \
     echo idea.config.path=/etc/idea/config >> idea/bin/idea.properties && \
     chmod -R 777 /etc/idea
+    
+RUN wget https://plugins.jetbrains.com/files/6954/94741/kotlin-plugin-1.4.0-release-IJ2020.2-1.zip && \
+    unzip kotlin-plugin-1.4.0-release-IJ2020.2-1.zip && \
+    rm -rf /opt/idea/plugins/Kotlin && \
+    mv Kotlin /opt/idea/plugins/ && \
+    rm kotlin-plugin-1.4.0-release-IJ2020.2-1.zip
+    
