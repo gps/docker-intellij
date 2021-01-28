@@ -15,6 +15,6 @@ jobs:
       - name: "Build, Tag, and Push Docker Image"
         run: |
           echo "${{secrets.DOCKER_HUB_TOKEN}}" | docker login -u gopalkrishnaps --password-stdin
-          docker build -t gopalkrishnaps/intellij:2020.3 -t gopalkrishnaps/intellij:latest .
+          docker build -t gopalkrishnaps/intellij:2020.3.1 -t gopalkrishnaps/intellij:latest .
           docker push gopalkrishnaps/intellij:latest
-          docker push gopalkrishnaps/intellij:2020.3
+          docker push gopalkrishnaps/intellij:2020.3.1
