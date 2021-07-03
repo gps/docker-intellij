@@ -1,6 +1,6 @@
 FROM openkbs/ubuntu-bionic-jdk-mvn-py3
 
-ARG INTELLIJ_VERSION="ideaIC-2021.1.1"
+ARG INTELLIJ_VERSION="ideaIC-2021.1.3"
 
 ARG INTELLIJ_IDE_TAR=${INTELLIJ_VERSION}.tar.gz
 
