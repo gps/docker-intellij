@@ -11,4 +11,4 @@ WORKDIR /jb
 RUN wget -nv https://download-cf.jetbrains.com/idea/${INTELLIJ_IDE_TAR} && \
     tar xzf ${INTELLIJ_IDE_TAR} && \
     tar tzf ${INTELLIJ_IDE_TAR} | head -1 | sed -e 's/\/.*//' | xargs -I{} ln -s {} idea && \
-    rm ${INTELLIJ_IDE_TAR} && \
+    rm ${INTELLIJ_IDE_TAR}
